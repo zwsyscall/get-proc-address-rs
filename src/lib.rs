@@ -1,4 +1,6 @@
 #![allow(unused_unsafe)]
+#![cfg(target_os = "windows")]
+
 //! # Get-Proc-Address-rs
 //!
 //! `get_proc_address` provides a rust native alternative to GetProcAddress
@@ -13,6 +15,10 @@
 //!     assert!(!being_debugged);
 //! }
 //! ```
+
+#[cfg(not(target_os = "windows"))]
+compile_error!("This crate only supports Windows.");
+
 use std::{arch::asm, ffi::CStr, mem::offset_of};
 mod types;
 use types::*;

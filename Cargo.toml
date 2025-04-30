@@ -6,8 +6,8 @@ authors = ["zwsyscall@pm.me"]
 description = "GetProcAdress implemented natively in rust with no external dependencies."
 license = "MIT OR Apache-2.0"
 readme = "README.md"
-keywords = ["GetProcAddress", "Windows", "WinAPI", "LoadLibrary"]
-categories = ["os"]
+keywords = ["GetProcAddress", "windows", "winapi", "LoadLibrary"]
+categories = ["os::windows-apis"]
 documentation = "https://docs.rs/get-proc-address-rs/0.1.0"
 homepage = "https://github.com/zwsyscall/get-proc-address-rs"
 
