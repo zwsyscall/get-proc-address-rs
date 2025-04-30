@@ -1,0 +1,14 @@
+[package]
+name = "get-proc-address-rs"
+version = "0.1.0"
+edition = "2021"
+authors = ["ben@pacman.sh"]
+description = "GetProcAdress implemented natively in rust with no external dependencies."
+license = "MIT OR Apache-2.0"
+readme = "README.md"
+keywords = ["GetProcAddress", "Windows", "WinAPI", "LoadLibrary"]
+categories = ["os"]
+documentation = "https://docs.rs/my_library"
+homepage = "https://github.com/yourusername/my_library"
+
+[dependencies]
