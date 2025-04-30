@@ -1,6 +1,6 @@
 [package]
 name = "get-proc-address-rs"
-version = "0.1.1"
+version = "0.1.2"
 edition = "2021"
 authors = ["zwsyscall@pm.me"]
 description = "GetProcAdress implemented natively in rust with no external dependencies."
@@ -12,3 +12,6 @@ documentation = "https://docs.rs/get-proc-address-rs/0.1.0"
 homepage = "https://github.com/zwsyscall/get-proc-address-rs"
 
 [dependencies]
+
+[package.metadata.docs.rs]
+targets = ["x86_64-pc-windows-msvc"]
