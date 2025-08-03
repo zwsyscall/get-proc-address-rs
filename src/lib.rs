@@ -35,17 +35,15 @@ macro_rules! ptr_at {
 /// # Examples
 /// ```rust
 /// let peb_offset = get_proc_address_rs::fetch_peb_offset();
-/// assert!(!peb_offset == 0);
+/// assert!(peb_offset != 0);
 /// ```
 #[cfg(target_arch = "x86_64")]
 pub fn fetch_peb_offset() -> u64 {
     #[allow(unused_assignments)]
     let mut offset: u64 = 0;
     unsafe {
-        asm!(
-            "mov {}, gs:[0x60]",
-            out(reg) offset,
-        );
+        asm!("mov {}, gs:[0x60]",
+            out(reg) offset);
     }
     offset
 }
@@ -56,10 +54,8 @@ pub fn fetch_peb_offset() -> u32 {
     #[allow(unused_assignments)]
     let mut offset: u32 = 0;
     unsafe {
-        asm!(
-            "mov {}, fs:[0x30]",
-            out(reg) offset,
-        );
+        asm!("mov {}, fs:[0x30]",
+            out(reg) offset);
     }
     offset
 }
